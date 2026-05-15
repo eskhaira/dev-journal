@@ -1,7 +1,7 @@
 1. React lets you combine markup, CSS, and JavaScript into these things called components, which you can render into your app's UI. It's basically a function sprinkled with markup. That markup is embedded into javascript using a html like syntax called JSX. A component could be as small as a button or an entire page. It could be reused anywhere you want to in your app. But why capital letters for defined components? Also why is defining components inside other components buggy and slow? I mean, if I was to use the components only once, then I could define it inside the other component. But it's good practise to define all the components up top because that way you can import those into other files.
 2. React has props. You can render information from one component inside another using props. Defining props goes something like this:
    function Profile({name,age,jobTitle}). Profile is the defined component. name, age, jobTitle are the props.
-3. what persists in React between renders is the current input value. React needs to remember what the user input was before it renders something new (function runs again).
+3. what persists in React between renders is the current input value. React needs to remember what the user input was before it renders something new (function runs again). The mechanism is called state, and the React tool for declaring it is useState. Props get passed in fresh each render. State persists
 
 Missing answers:
 
