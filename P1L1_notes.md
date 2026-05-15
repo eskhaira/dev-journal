@@ -2,3 +2,10 @@
 2. React has props. You can render information from one component inside another using props. Defining props goes something like this:
    function Profile({name,age,jobTitle}). Profile is the defined component. name, age, jobTitle are the props.
 3. what persists in React between renders is the current input value. React needs to remember what the user input was before it renders something new (function runs again).
+
+Missing answers:
+
+1. a React component "has" props (data coming in from outside, like constructor arguments) and state (data it manages internally, like private member variables).
+2. C++: Foo myObj(arg1, arg2); — you call the constructor with positional arguments.
+   React: <Foo name="Maria" age={30} /> — you "instantiate" by writing the component as a JSX tag, and you pass arguments as named attributes.
+3. Props don't persist — they get handed in fresh by the parent every render. Local variables declared inside the function body don't persist — they're created from scratch each render. State is the only thing the component itself remembers.
