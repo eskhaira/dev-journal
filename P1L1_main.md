@@ -23,3 +23,17 @@ function Greeting({ name, role }: { name: string; role: string })
 
 The first curly braces block is telling what the function is receiving, and the second curly braces block tells what type of value is being received in the first block.
 A React component always receives exactly one argument, an object containing all its props. All destructuring goes in one set of braces, and all types go in one set of braces.
+
+index.html is empty because it's not the content — it's the launchpad. It contains a root div and a script tag. The script tag loads JavaScript, which builds the actual content by inserting it into the root div at runtime.
+
+P1L1 conceptual gaps
+
+Candidate 2 — Components are recognized by capitalization, not by what library they come from. From today's pop quiz. The gap: thinking lowercase tags like <div> come from React's library. They don't — they're HTML, provided by the browser. React just looks at the first letter to decide whether to treat a tag as a component or as HTML.
+Candidate 3 — useState survives re-renders but not refreshes. From the very start of today's session. You initially said it survived refreshes. This is a foundational distinction worth writing down.
+Candidate 4 — package.json is a shopping list, not application code. From the quiz just now. The model of dependency-manifest-vs-installed-deps is universal across languages; worth a permanent entry.
+
+Engineering habits i want to keep
+
+Candidate 5 — Yak-shaving the environment. When you wanted to update Node/npm at the start of the session. The lesson: when your environment works, don't fix it. Update with intent, never mid-task. You caught yourself; worth a positive-note entry.
+Candidate 6 — Use Chrome for React dev, not Safari. From the HMR debugging episode. Worth noting as a tool-defaults entry.
+Candidate 7 — git status before git add, always. From the Git chunk. The discipline of reading what you're about to stage before staging it.
