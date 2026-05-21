@@ -28,7 +28,7 @@ index.html is empty because it's not the content — it's the launchpad. It cont
 
 P1L1 conceptual gaps
 
-Candidate 2 — Components are recognized by capitalization, not by what library they come from. From today's pop quiz. The gap: thinking lowercase tags like <div> come from React's library. They don't — they're HTML, provided by the browser. React just looks at the first letter to decide whether to treat a tag as a component or as HTML.
+Candidate 2 — Components are recognized by capitalization, not by what library they come from. From today's pop quiz. The gap: thinking lowercase tags like `<div>` come from React's library. They don't — they're HTML, provided by the browser. React just looks at the first letter to decide whether to treat a tag as a component or as HTML.
 Candidate 3 — useState survives re-renders but not refreshes. From the very start of today's session. You initially said it survived refreshes. This is a foundational distinction worth writing down.
 Candidate 4 — package.json is a shopping list, not application code. From the quiz just now. The model of dependency-manifest-vs-installed-deps is universal across languages; worth a permanent entry.
 
