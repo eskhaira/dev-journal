@@ -47,7 +47,7 @@ index.html is empty because it's not the content — it's the launchpad. It cont
 P1L1 conceptual gaps
 
 2. Components are recognized by capitalization. `<App />` → developer-written component because of the capital A. `<div /> `→ HTML element provided by the browser because of the lowercase d. React looks only at the first character to decide. The original mistake: thinking lowercase tags came "from React's library." They don't — they're HTML, built into the browser, not React.
-3. Use state survives re-renders, but it cannot survive a page refresh.
+3. useState survives re-renders, but it cannot survive a page refresh.
 
 4. A package.json just contains the name of the modules that the app is going to need. We don't need to upload the entire node_modules folder on GitHub. If somebody clones my repository from GitHub and runs the command `npm install`, it automatically installs all the required packages that are listed in the package.json file on the local machine of whoever cloned my repository.
 
