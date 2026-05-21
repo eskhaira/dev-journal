@@ -22,3 +22,9 @@ Open questions to research over the next 6 months:
 Decision point: Revisit at the start of P5. Compare against
 truck-domain ideas. Pick the one that has the better mix of
 "I would use this daily" and "skills I want to build."
+
+## Teachbacks
+
+P1L1 Teach back: what is a React component?
+
+My answer: A React component is basically a JavaScript function that returns JSX and it takes props as an argument. The props inside is a single object, and it could have multiple fields like `props.name`, `props.size`, `props.jobTitle`, `props.age`. This object is passed when we write the component as JSX and provide the required fields it needs. Every component name starts with a capital letter because that's how React knows it's a user-defined component and not an HTML component that is received from the browser.
