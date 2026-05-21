@@ -28,12 +28,15 @@ index.html is empty because it's not the content — it's the launchpad. It cont
 
 P1L1 conceptual gaps
 
-Candidate 2 — Components are recognized by capitalization, not by what library they come from. From today's pop quiz. The gap: thinking lowercase tags like `<div>` come from React's library. They don't — they're HTML, provided by the browser. React just looks at the first letter to decide whether to treat a tag as a component or as HTML.
-Candidate 3 — useState survives re-renders but not refreshes. From the very start of today's session. You initially said it survived refreshes. This is a foundational distinction worth writing down.
-Candidate 4 — package.json is a shopping list, not application code. From the quiz just now. The model of dependency-manifest-vs-installed-deps is universal across languages; worth a permanent entry.
+2. Components are recognized by capitalization. `<App />` → developer-written component because of the capital A. `<div /> `→ HTML element provided by the browser because of the lowercase d. React looks only at the first character to decide. The original mistake: thinking lowercase tags came "from React's library." They don't — they're HTML, built into the browser, not React.
+3. Use state survives re-renders, but it cannot survive a page refresh.
+
+4. A package.json just contains the name of the modules that the app is going to need. We don't need to upload the entire node_modules folder on GitHub. If somebody clones my repository from GitHub and runs the command `npm install`, it automatically installs all the required packages that are listed in the package.json file on the local machine of whoever cloned my repository.
 
 Engineering habits i want to keep
 
-Candidate 5 — Yak-shaving the environment. When you wanted to update Node/npm at the start of the session. The lesson: when your environment works, don't fix it. Update with intent, never mid-task. You caught yourself; worth a positive-note entry.
-Candidate 6 — Use Chrome for React dev, not Safari. From the HMR debugging episode. Worth noting as a tool-defaults entry.
-Candidate 7 — git status before git add, always. From the Git chunk. The discipline of reading what you're about to stage before staging it.
+5. Do not update anything while you are working inside a project. Do not update node version, npm version, or vite version while you are working inside a project. That thing only occurs before you start up the project and set up your environment.
+
+6. For HMR debugging, always use Chrome instead of Safari. Safari has caused issues before, and I do not want to refresh pages again and again, but you don't need to do that with Chrome. Chrome also has better debugging tools.
+
+7. Before doing a `git add.`, always do a `git status` check to see what things need to be added and what things are already added by the color red or green.
