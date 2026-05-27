@@ -71,7 +71,7 @@ key is supposed to answer "which transaction is this?" not "where in the array i
 
 ## 2026-05-27 - P1L2 Solo Build
 
-So I performed the solo build. The project is called a book tracker, and it displays lists of books. I had the option to also add another section with books that I want to read. I also did that. I also numbered the list. The project was pretty simple. I had to declare an array of books, and I also had to declare another array called "Books I Want to Read". The first one had five items, and the second one had three items. I also created a book component in a separate file which displays those lists of books. Each component is taken in an object with four fields:
+So I performed the solo build. The project is called a book tracker, and it displays lists of books. I had the option to also add another section with books that I want to read. I also did that. I also numbered the list. I had to declare an array of books, and I also had to declare another array called "Books I Want to Read". The first one had five items, and the second one had three items. I also created a book component in a separate file which displays those lists of books. Each component is taken in an object with four fields:
 
 - title
 - author
