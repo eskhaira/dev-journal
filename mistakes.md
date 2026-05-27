@@ -58,3 +58,13 @@ Engineering habits i want to keep
 6. For HMR debugging, always use Chrome instead of Safari. Safari has caused issues before, and I do not want to refresh pages again and again, but you don't need to do that with Chrome. Chrome also has better debugging tools.
 
 7. Before doing a `git add.`, always do a `git status` check to see what things need to be added and what things are already added by the color red or green.
+
+## 2026-05-27 - P1L2 Core lesson
+
+`.map()` doesn't hand you back the original transactions. It hands you back a brand new array containing whatever your transformation rule produced for each item.
+
+console output is signal mixed with noise, and learning to spot the difference is part of the job.
+
+key must be unique among siblings, and stable for the lifetime of the item.
+keys aren't about being numbers, they're about identity that survives change.
+key is supposed to answer "which transaction is this?" not "where in the array is this?"
