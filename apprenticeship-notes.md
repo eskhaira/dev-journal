@@ -22,3 +22,35 @@ Open questions to research over the next 6 months:
 Decision point: Revisit at the start of P5. Compare against
 truck-domain ideas. Pick the one that has the better mix of
 "I would use this daily" and "skills I want to build."
+
+## Teachbacks
+
+P1L1 Teach back: what is a React component?
+
+My answer: A React component is basically a JavaScript function that returns JSX and it takes props as an argument. The props inside is a single object, and it could have multiple fields like `props.name`, `props.size`, `props.jobTitle`, `props.age`. This object is passed when we write the component as JSX and provide the required fields it needs. Every component name starts with a capital letter because that's how React knows it's a user-defined component and not an HTML component that is received from the browser.
+
+P1L1 Solo Build - truck-stop-tracker
+
+What you remembered without checking
+I remembered that my component needed three fields as one object, and each of those fields needed to be defined. Two of them were strings, and one of them was a number. Then inside the app component, I needed to include my truck stop component and pass four examples, each containing the object with three fields: name, location, and rating.
+
+What you had to look up
+Honestly, the only thing I needed to look up was the git command I needed, the `git remote add origin`. I forgot that command, so I needed to look that up.
+
+Where you got stuck (if anywhere)
+Same place I got stuck while we were practicing. I initialized the git repository with the README.md file, and when I tried to push from my local repo, it kept giving me errors.I did try to take help from Gemini to clear those errors, but then I realized that I could just delete and re-initialize from the beginning. I had to delete the repository on github.com and then reinitialize everything from the beginning this time without the README.md file.
+
+One thing that surprised you
+Nothing. It was pretty generic, although I did get to use something other than a string. For example, for rating I had to use a number, so that was different.
+
+## Solo Build P1L3 Question Answers
+
+1. The user clicks the "Clear All" button.
+2. When the button is clicked, all transactions on the page should be gone. Clear empty list should be displayed
+3. yes that data is already state when we defined the `const [transactions, setTransactions]=useState(....)`
+4. So i need to build a new function that changes the data to an empty list
+5. The function just creates a new empty array. I did it by `setTransactions([]);`
+
+## P1L3 - Explain the state + delete flow in 100 words
+
+The logic went like this. The transaction array holding the transactions must be in state so we defined the `const [transactions, setTransactions]=useState(........//transactions inside)`. `transactions` hold the original array and `setTransactions` is what tells react what changed so react can re-render. Then we needed a function to handle the change of deleting the transaction. We receive the id of that transaction, then we create a new array by filtering out that transaction that the id is pointing towards from the original array and then we call setTransaction with the new array inside. That function is then passed to the `<Transactions>` component as props to display the delete button in front of every transaction along with the passed prop to perform the delete when the button is clicked. When we call the component as JSX, we can pass our defined function as a prop inside the component.
