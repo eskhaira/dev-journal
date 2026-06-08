@@ -42,3 +42,11 @@ Same place I got stuck while we were practicing. I initialized the git repositor
 
 One thing that surprised you
 Nothing. It was pretty generic, although I did get to use something other than a string. For example, for rating I had to use a number, so that was different.
+
+## Solo Build P1L3 Question Answers
+
+1. The user clicks the "Clear All" button.
+2. When the button is clicked, all transactions on the page should be gone. Clear empty list should be displayed
+3. yes that data is already state when we defined the `const [transactions, setTransactions]=useState(....)`
+4. So i need to build a new function that changes the data to an empty list
+5. The function just creates a new empty array. I did it by `setTransactions([]);`
