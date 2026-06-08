@@ -50,3 +50,7 @@ Nothing. It was pretty generic, although I did get to use something other than a
 3. yes that data is already state when we defined the `const [transactions, setTransactions]=useState(....)`
 4. So i need to build a new function that changes the data to an empty list
 5. The function just creates a new empty array. I did it by `setTransactions([]);`
+
+## P1L3 - Explain the state + delete flow in 100 words
+
+The logic went like this. The transaction array holding the transactions must be in state so we defined the `const [transactions, setTransactions]=useState(........//transactions inside)`. `transactions` hold the original array and `setTransactions` is what tells react what changed so react can re-render. Then we needed a function to handle the change of deleting the transaction. We receive the id of that transaction, then we create a new array by filtering out that transaction that the id is pointing towards from the original array and then we call setTransaction with the new array inside. That function is then passed to the `<Transactions>` component as props to display the delete button in front of every transaction along with the passed prop to perform the delete when the button is clicked. When we call the component as JSX, we can pass our defined function as a prop inside the component.
