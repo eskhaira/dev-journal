@@ -81,3 +81,9 @@ So I performed the solo build. The project is called a book tracker, and it disp
 - position
   Then inside the App.tsx file, I am calling the `dot map` function on my `books`, and on `booksToRead` arrays.
   The only problem I had was to number the list, so I came up with the position parameter inside the object, and I rendered that position parameter as an index in the map function call.
+
+## P1L4 Solo Build NOTES
+
+- I can use search, official docs but no AI solving anything for me
+- I needed to find the particular method for this on MDN.(mozilla docs for javascript). We needed to figure out how to match each typed input in the search field the description of transactions. As the user typed each word, only display the transaction whose description inlcuded those words. So we used `.include("")`
+  I kept trying to match the whole string being typed with the description. and i kept using `setSearchText[""]` to empty the state after each re render which kept deleting all the transactions displayed on the browser even on a single word type.

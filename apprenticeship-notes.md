@@ -54,3 +54,17 @@ Nothing. It was pretty generic, although I did get to use something other than a
 ## P1L3 - Explain the state + delete flow in 100 words
 
 The logic went like this. The transaction array holding the transactions must be in state so we defined the `const [transactions, setTransactions]=useState(........//transactions inside)`. `transactions` hold the original array and `setTransactions` is what tells react what changed so react can re-render. Then we needed a function to handle the change of deleting the transaction. We receive the id of that transaction, then we create a new array by filtering out that transaction that the id is pointing towards from the original array and then we call setTransaction with the new array inside. That function is then passed to the `<Transactions>` component as props to display the delete button in front of every transaction along with the passed prop to perform the delete when the button is clicked. When we call the component as JSX, we can pass our defined function as a prop inside the component.
+
+## P1L4 - Initial Notes
+
+Never store what you can derive.
+Value displays, onChange writes, and onChange only fires when the user acts.
+
+## AI usage log for P1L4
+
+- It was not clear to me that i could research the docs so i pushed claude to give me the method. Next time i need to read the docs. My mistake was thinking that was against the rules
+- I need to take my frustrations out in the gym, not on claude.
+
+## P1L4 - 100 words
+
+The whole point of controlled input is to compute on each keystroke pressed by the user. The text from the input field needs to live in state. A controlled input works with two levers, value and onChange. Value points towards the state variable in which the text needs to live and onChange watches for user input (keystrokes), fires as soon as a single key is pressed, updates the state variable and react re-renders the whole app() component. When user types, onChange fires and stores that value in the declared state variable, react re-renders. As another key is pressed, onChange fires again, value in the state variable is updated (not replaced) and react re-renders again.
