@@ -86,4 +86,5 @@ So I performed the solo build. The project is called a book tracker, and it disp
 
 - I can use search, official docs but no AI solving anything for me
 - I needed to find the particular method for this on MDN.(mozilla docs for javascript). We needed to figure out how to match each typed input in the search field the description of transactions. As the user typed each word, only display the transaction whose description inlcuded those words. So we used `.include("")`
-  I kept trying to match the whole string being typed with the description. and i kept using `setSearchText[""]` to empty the state after each re render which kept deleting all the transactions displayed on the browser even on a single word type.
+- I kept trying to match the whole string being typed with the description. and i kept using `setSearchText[""]` to empty the state after each re render which kept deleting all the transactions displayed on the browser even on a single word type.
+- AI gave Socratic questions and the architecture shape; I typed every line; the method I fetched was .includes off MDN
