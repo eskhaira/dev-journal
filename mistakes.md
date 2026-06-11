@@ -71,20 +71,4 @@ key is supposed to answer "which transaction is this?" not "where in the array i
 
 stored values are facts; derived values are computations. Stored has to live somewhere. Derived is produced on demand and thrown away.
 
-## 2026-05-27 - P1L2 Solo Build
-
-So I performed the solo build. The project is called a book tracker, and it displays lists of books. I had the option to also add another section with books that I want to read. I also did that. I also numbered the list. I had to declare an array of books, and I also had to declare another array called "Books I Want to Read". The first one had five items, and the second one had three items. I also created a book component in a separate file which displays those lists of books. Each component is taken in an object with four fields:
-
-- title
-- author
-- year
-- position
-  Then inside the App.tsx file, I am calling the `dot map` function on my `books`, and on `booksToRead` arrays.
-  The only problem I had was to number the list, so I came up with the position parameter inside the object, and I rendered that position parameter as an index in the map function call.
-
-## P1L4 Solo Build NOTES
-
-- I can use search, official docs but no AI solving anything for me
-- I needed to find the particular method for this on MDN.(mozilla docs for javascript). We needed to figure out how to match each typed input in the search field the description of transactions. As the user typed each word, only display the transaction whose description inlcuded those words. So we used `.includes("")`
-- I kept trying to match the whole string being typed with the description. The destroyer was `setTransactions(filtered)` overwriting the stored truth with a derived view.
-- AI gave Socratic questions and the architecture shape; I typed every line; the method I fetched was .includes off MDN
+## P1L5 - mistakes made by me
