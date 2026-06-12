@@ -126,3 +126,4 @@ That took care of the 4rth test. But another problem came up. If the amount was 
 `if(amount === ""){return;}`
 
 Now amount can be left empty, nothing gets added. But now amount can be added as 0.
+But one more thing went wrong. Empty spaces in the amount can be added as 0. The Number(" ") test i ran in the console was meant to catch this exact error. So i fixed this with trim(). So the third guard rail now becomes `if(amount.trim() === ""){return;}`
