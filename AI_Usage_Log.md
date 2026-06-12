@@ -30,3 +30,7 @@ When i got stuck at 4rth guard rail test, i asked claude for help. Claude told m
 3. Number(" ")
 
 I also did not follow the instructions to explain my workflow, just plainly went to fixing the error. The whole workflow explanation is inside mistakes.md
+
+Claude also told me to do these minor fixes:
+Placeholders at line 76/82/91 updated with proper casing. SearchText changed to Search Transactions
+description needed to be added as trimmed. So line 56 became `description: description.trim(),`
