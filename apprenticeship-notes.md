@@ -57,4 +57,21 @@ Value displays, onChange writes, and onChange only fires when the user acts.
 
 The whole point of controlled input is to compute on each keystroke pressed by the user. The text from the input field needs to live in state. A controlled input works with two levers, value and onChange. Value points towards the state variable in which the text needs to live and onChange watches for user input (keystrokes), fires as soon as a single key is pressed, updates the state variable and react re-renders the whole app() component. When user types, onChange fires and stores that value in the declared state variable, react re-renders. As another key is pressed, onChange fires again, value in the state variable is replaced and react re-renders again.
 
-## P1L5 - Initial notes
+## P1L5 - Notes
+
+Branch naming method, locked in from today: type/short-imperative-description, kebab-case. Types: feat, fix, chore, docs, refactor, test. The test: someone reading git branch should know what merging it ships.
+
+- I was not clear with step two instructions here:
+  "Wrap the two add-inputs and button in a `<form>`, move handleAdd to onSubmit, accept the event, preventDefault line one. Acceptance test: Enter adds a transaction and the page does not reload — watch for the flash"
+
+  So i asked :
+  "Ok. i want to make sure i do the right thing as you told me. I am putting the two input fields, description and amount, inside `<form></form>`. and instead of
+  `onClick={() => handleAdd()}`
+  you want me to write `onSubmit ={() => handleAdd()}`?
+  and what is `preventDefault`? Where do i use it?"
+
+  `<form>` Is a browser tag. when it fires (submits), the following happens: the browser packages up the field values, sends them to a server and then navigate to a new page with a response.
+
+  `preventDefault` tells the browser "I'm handling this myself. Do not use default action." For a submit event, the default action is that whole package-and-navigate routine. One method call switches it off, the page stays alive, React stays in charge.
+
+-

@@ -72,3 +72,23 @@ key is supposed to answer "which transaction is this?" not "where in the array i
 stored values are facts; derived values are computations. Stored has to live somewhere. Derived is produced on demand and thrown away.
 
 ## P1L5 - mistakes made by me
+
+- Recall question 4 was answered wrong
+
+Question - (Standing target) You want to display how many transactions are currently visible after filtering. Stored or derived? Where does it live and why?
+
+My Wrong Answer - This is a derived value. It lives in state because it is subject to change every time the filter produces new set of transactions. Storing a computed value will result in lag and re render will not surface it. It would require a page refresh.
+
+Real Answer - Derived means it does not live in state. Anything that gets computed each render does not live in state. Changing across renders is not what makes somthing state. The real test: can I compute it from existing state or props? Yes → const. Is it a fact nothing else can produce — something only the user or the world knows? → state.
+
+- One error in question 1
+
+question: (L2) Who actually reads the key prop — and why does array index stop working as a key the moment items can be deleted?
+
+My answer: React reads the key prop. Array index stop working as a key the moment items are deleted because every re render, the index will reset and each item will be assigned a new key. That defeats the purpose of each item having a unique identity.
+
+Error: Indexes don't 'reset'. They 'shift'. Delete item 0 and every other item below moves up a slot. So key 1 still exists but it is now pointing at a different transaction.
+
+- Fixed error in the following
+
+i was asked to create a const variable counting the number of transactions. I looked up the method on MDN website and the method is `.length` so I needed to count the transactions not the `searchText` so it will not be `searchText.length`, it will be `filteredTransactions.length`
