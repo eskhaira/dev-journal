@@ -71,7 +71,7 @@ key is supposed to answer "which transaction is this?" not "where in the array i
 
 stored values are facts; derived values are computations. Stored has to live somewhere. Derived is produced on demand and thrown away.
 
-## P1L5 - mistakes made by me
+## P1L5 - Mistakes in answers
 
 - Recall question 4 was answered wrong
 
@@ -92,3 +92,37 @@ Error: Indexes don't 'reset'. They 'shift'. Delete item 0 and every other item b
 - Fixed error in the following
 
 i was asked to create a const variable counting the number of transactions. I looked up the method on MDN website and the method is `.length` so I needed to count the transactions not the `searchText` so it will not be `searchText.length`, it will be `filteredTransactions.length`
+
+## P1L5 Mistakes in code
+
+- I accidently wrote the guard rails inside the `const newTransaction` in the `handleAdd()` function. The correct way is to use the guard rails directly below `preventDefault` and before `const newTransaction`.
+
+The 5 acceptance tests for guard rails to work:
+
+1. Both fields empty, Enter → nothing added
+2. Description is only spaces → nothing added
+3. Description filled, amount is "abc" → nothing added
+4. Description filled, amount field left empty → nothing added
+5. Valid pair → adds and clears, like now
+
+guard rails i wrote:
+
+1. `if (Number.isNaN(Number(amount))) {return;}`
+2. `if (description.trim() === "") {return;}`
+
+Attempt 1: Failed at 4rt test. Amount got added as 0
+
+As per claude instructions, i ran three commands inside the chrome console which were as follows
+
+1. Number("")
+2. Number.isNaN(Number(""))
+3. Number(" ")
+
+Outputs were: 0, false, 0 respectively.
+
+So to take care of the 4rth test, i added one more guard rail: `if(Number(amount) === 0){return;}`
+
+That took care of the 4rth test. But another problem came up. If the amount was added as 0, the transaction would not be added. So i fixed the third guard. Instead of checking for 0, i will check for empty string. So third one becomes:
+`if(amount === ""){return;}`
+
+Now amount can be left empty, nothing gets added. But now amount can be added as 0.

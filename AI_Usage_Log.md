@@ -3,7 +3,7 @@
 - It was not clear to me that i could research the docs so i pushed claude to give me the method. Next time i need to read the docs. My mistake was thinking that was against the rules
 - I need to take my frustrations out in the gym, not on claude.
 
-## AI usage log for P1L5
+## AI usage log for P1L5 - Non coding help
 
 - so before I began the lesson, me and Claude hardcoded a few rules first the solo builds will require one or two concepts from past lessons to be demonstrated while maintaining the core idea of the current lesson as the main focus.
 - we talked about increasing the pace of the apprenticeship. The rule going forward is this - Claude will grade me on five things.
@@ -21,4 +21,12 @@
 - hit a deprecation on React.FormEvent, asked for the why after reading the diagnostic.
   Claude said: The browser — the actual DOM spec — has no event called FormEvent. Never did. When a form submits, the platform fires a SubmitEvent. When an input changes, an InputEvent. React wraps these native events in its own synthetic wrapper, and years ago React's type definitions invented one vague bucket type called FormEvent to cover all of them. It papered over what the platform really does. The types maintainers are now renaming to match reality
 
--
+## AI usage log for P1L5 - Coding Help
+
+When i got stuck at 4rth guard rail test, i asked claude for help. Claude told me to run these three to check their outputs in the console. That would help me determine why my guard rails were failing.
+
+1. Number("")
+2. Number.isNaN(Number(""))
+3. Number(" ")
+
+I also did not follow the instructions to explain my workflow, just plainly went to fixing the error. The whole workflow explanation is inside mistakes.md
