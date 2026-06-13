@@ -24,11 +24,11 @@ Alright, so far we've made changes to the App.tsx file. We deleted everything th
 What VS code did was to help me fix it. It is actually name, role; its name is a string; role is a string.
 Initial mistake was something like this.
 
-function Greeting({name}:{name:string},{role}:{role:string})
+`function Greeting({name}:{name:string},{role}:{role:string})`
 
 The fix is this
 
-function Greeting({ name, role }: { name: string; role: string })
+`function Greeting({ name, role }: { name: string; role: string })`
 
 The first curly braces block is telling what the function is receiving, and the second curly braces block tells what type of value is being received in the first block.
 A React component always receives exactly one argument, an object containing all its props. All destructuring goes in one set of braces, and all types go in one set of braces.
@@ -46,7 +46,7 @@ Engineering habits i want to keep
 
 5. Do not update anything while you are working inside a project. Do not update node version, npm version, or vite version while you are working inside a project. That thing only occurs before you start up the project and set up your environment.
 
-6. For HMR debugging, always use Chrome instead of Safari. Safari has caused issues before, and I do not want to refresh pages again and again, but you don't need to do that with Chrome. Chrome also has better debugging tools.
+6. For HMR debugging, always use Chrome instead of Safari. Safari has caused issues before, and I do not want to refresh pages again and again, but i don't need to do that with Chrome. Chrome also has better debugging tools.
 
 7. Before doing a `git add.`, always do a `git status` check to see what things need to be added and what things are already added by the color red or green.
 
@@ -54,7 +54,7 @@ Engineering habits i want to keep
 
 `.map()` doesn't hand you back the original transactions. It hands you back a brand new array containing whatever your transformation rule produced for each item.
 
-console output is signal mixed with noise, and learning to spot the difference is part of the job.
+console output is signal mixed with noise, and learning to spot the difference is part of my job.
 
 key must be unique among siblings, and stable for the lifetime of the item.
 keys aren't about being numbers, they're about identity that survives change.
@@ -101,7 +101,7 @@ guard rails i wrote:
 1. `if (Number.isNaN(Number(amount))) {return;}`
 2. `if (description.trim() === "") {return;}`
 
-Attempt 1: Failed at 4rt test. Amount got added as 0
+Attempt 1: Failed at 4rth test. Amount got added as 0
 
 As per claude instructions, i ran three commands inside the chrome console which were as follows
 
