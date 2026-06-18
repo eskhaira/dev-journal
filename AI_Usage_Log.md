@@ -34,3 +34,9 @@ I also did not follow the instructions to explain my workflow, just plainly went
 Claude also told me to do these minor fixes:
 Placeholders at line 76/82/91 updated with proper casing. SearchText changed to Search Transactions
 description needed to be added as trimmed. So line 56 became `description: description.trim(),`
+
+## AI usage log for P1L5 - Solo Build
+
+- I asked claude to explain the requirements in detail
+- I also asked claude about how i am thinking about doing this - Every amount entered by the user will be rounded off to 2 decimal places, then multiplied by 100 and then stored as an integer? And then to display dollars, we divide by 100 and show as a float?
+- I looked up MDN for the method claude suggested as follows: "So the thing you render can't be a number at all — it has to be a string, formatted to exactly two places. Go find the method on MDN that turns a number into a fixed-decimal string"

@@ -118,3 +118,8 @@ That took care of the 4rth test. But another problem came up. If the amount was 
 
 Now amount can be left empty, nothing gets added. But now amount can be added as 0.
 But one more thing went wrong. Empty spaces in the amount can be added as 0. The Number(" ") test i ran in the console was meant to catch this exact error. So i fixed this with trim(). So the third guard rail now becomes `if(amount.trim() === ""){return;}`
+
+## P1L5 Mistakes in Solo Build
+
+- I was looking into `parseInt` and `parseFloat` methods on MDN directly. But i decided to store dollars as integers by multiplying by 100. To display those integers as Dollars again, i tried to divide by 100 but that didn't work.
+- To display cents as dollars again, i instead used `.toFixed(2)` which displays a stored number as a string with two decimal places.

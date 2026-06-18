@@ -84,4 +84,12 @@ Branch naming method, locked in from today: type/short-imperative-description, k
 
   `preventDefault` tells the browser "I'm handling this myself. Do not use default action." For a submit event, the default action is that whole package-and-navigate routine. One method call switches it off, the page stays alive, React stays in charge.
 
--
+## P1L5 Solo Build Notes
+
+What the user types in amount field: Dollars (for e.g. 19.99)
+What the state stores: 1999
+What the amount is displayed on the screen: 19.99
+
+I used `Math.round` to fix the 19.999 issue so it is rounded to 20.00 and is stored as 2000.
+
+And i used `.toFixed(2)` method to display the stored cents as a string with two decimal places
