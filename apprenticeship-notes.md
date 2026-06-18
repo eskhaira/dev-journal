@@ -93,3 +93,7 @@ What the amount is displayed on the screen: 19.99
 I used `Math.round` to fix the 19.999 issue so it is rounded to 20.00 and is stored as 2000.
 
 And i used `.toFixed(2)` method to display the stored cents as a string with two decimal places
+
+## P1L5 Teach-back 100 words
+
+Our goal in this lesson was to make sure the app takes a description and an amount, validates them, and adds a new transaction to state. The add button and the two input fields now live inside a `<form>` element. The form's `onSubmit` runs the handleAdd function. HandleAdd now checks for errors in input fields before adding any new transactions (no empty fields, no words in amount field, etc.). preventDefault method stops the default method for checking inputs, basically me telling react that the errors are being handled by me. The amount is being stored as integer cents, but is displayed as dollars again inside the transaction component using the `.toFixed(2)` method.
