@@ -97,3 +97,22 @@ And i used `.toFixed(2)` method to display the stored cents as a string with two
 ## P1L5 Teach-back 100 words
 
 Our goal in this lesson was to make sure the app takes a description and an amount, validates them, and adds a new transaction to state. The add button and the two input fields now live inside a `<form>` element. The form's `onSubmit` runs the handleAdd function. HandleAdd now checks for errors in input fields before adding any new transactions (no empty fields, no words in amount field, etc.). `Number("")` is 0, 0 is a real number so `Number.isNaN(0)` is false, which is why the empty field sailed through until i added the `.trim()` guard. `preventDefault` stops the browser's default form-submission action: the package-the-fields-and-navigate-to-a-new-page routine. The amount is being stored as integer cents, but is displayed as dollars again inside the transaction component using the `.toFixed(2)` method. $0 transactions are allowed.
+
+## P1L6 Notes
+
+The trap — `onClick={onDelete(id)}`, no arrow. The parentheses mean run it now. So this doesn't hand React a function; it executes `onDelete(id)` during render and hands React whatever comes back — undefined. Two things break:
+
+- It fires on render, not on click. Every row deletes itself the instant the list draws.
+- On the real click, React calls undefined — nothing, or a crash.
+
+Created and switched to branch feat/aggregate_numbers_and_component_split
+branch name changed. Read mistakes.md
+
+added new field category into transactionProps, updated the component call inside JSX and for now handleAdd adds a new transaction with category "Uncategorized"
+
+Created a separate function to format cents back into dollars as formatting is now repeating in more than one place.
+Seed data now holds six transactions, with multiple transactions having same category. This was done to check the math behind category totals we are going to code afterwards.
+
+## P1L6 Solo Build Notes
+
+## P1L6 Teach-back 100 words

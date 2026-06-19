@@ -123,3 +123,27 @@ But one more thing went wrong. Empty spaces in the amount can be added as 0. The
 
 - I was looking into `parseInt` and `parseFloat` methods on MDN directly. But i decided to store dollars as integers by multiplying by 100. To display those integers as Dollars again, i tried to divide by 100 but that didn't work.
 - To display cents as dollars again, i instead used `.toFixed(2)` which displays a stored number as a string with two decimal places.
+
+## P1L6 Mistakes in Answers
+
+- Recall Questions:
+
+1. I want to show a grand total of all transaction amounts at the bottom of the list. Should that total live in state (a fourth useState), or somewhere else? Give me the answer and the reason — and tell me specifically what breaks if you store it.
+
+My Answer: No, it does not need to live in state. It is a derived value so it can be assigned to a const variable. If it was a factual value, something only the user or the world knows, then it needed to live in state. If we do store this in state, nothing will break.
+
+Fix in my answer: It will break in a specific way. We store the total — `const [total, setTotal] = useState(0)`. The user deletes a transaction. Our handleDelete runs `setTransactions(filtered)` and returns. On screen right now, what number does the user see for the total, and why? Then: what would we have to bolt onto `handleDelete`, `handleAdd`, and `handleClearAll` to stop that from happening?
+
+2. In your current code, the parent passes the delete handler down as `onDelete={handleDelete}` — a bare reference. But inside the row, the button is wired as `onClick={() => onDelete(id)}` — wrapped in an arrow function. Why the wrapper in one spot and the bare name in the other? What would go wrong if you wrote `onClick={onDelete(id)}` instead?
+
+My Answer: I do not remember this. It was explained to me but i forgot.
+
+Real Answer: When we wrote `onDelete={handleDelete}`, we are not calling the function, we are just passing it down as a prop to the child. When we wrote `onClick={() => onDelete(id)}`, we wrap it in a arrow function because we need to pass id, and only the child knows which one. A bare `onDelete` can't carry that. When React fires it, React calls `onDelete(event)`, handing it the click event as the id. Garbage. So we write a tiny new function, `() => onDelete(id)`, that when React calls it on click turns around and calls onDelete with the specific id we want.
+
+- Git branch renamed to kebab-case from snake-case. It is now feat/aggregate-numbers-and-component-split
+
+- Auto detect categories does not work until we use an LLM which comes at P5 not in P1L6. So for now, every new catogory added will be "Uncategorized"
+
+## P1L6 Mistakes in code
+
+## P1L6 Mistakes in Solo Build

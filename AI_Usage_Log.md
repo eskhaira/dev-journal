@@ -40,3 +40,17 @@ description needed to be added as trimmed. So line 56 became `description: descr
 - I asked claude to explain the requirements in detail
 - I also asked claude about how i am thinking about doing this - Every amount entered by the user will be rounded off to 2 decimal places, then multiplied by 100 and then stored as an integer? And then to display dollars, we divide by 100 and show as a float?
 - I looked up MDN for the method claude suggested as follows: "So the thing you render can't be a number at all — it has to be a string, formatted to exactly two places. Go find the method on MDN that turns a number into a fixed-decimal string"
+
+## AI usage log for P1L6 - Non coding help
+
+Recall warmup question 3 was not clear to me so i asked for answer directly, stating i do not know the answer.
+
+Claude told me to fix the branch name to kebab-case. Told me to rename `convertDollars` function to `formatCents`. Also told me to add repeating $ sign inside the formatCents instead of writing it every time we need to display it.
+
+I asked claude to add more transactions in seed data to test category totals math logic when we write it.
+
+Asked claude about `handleAdd` throwing an error when category was declared in transactionProps.
+
+## AI usage log for P1L6 - Coding Help
+
+## AI usage log for P1L6 - Solo Build
