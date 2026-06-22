@@ -51,6 +51,8 @@ I asked claude to add more transactions in seed data to test category totals mat
 
 Asked claude about `handleAdd` throwing an error when category was declared in transactionProps.
 
+OK, I asked Claude to give me the result on how to write categoryTotals function. Claude hesitated, but I insisted again, and then it gave me the answer to how to write the reduced function for categoryTotals. After looking at the result I realized that my understanding of reduce function is incomplete. That is why I cannot understand what I needed to do here, so I asked claude to explain reduce from beginning with lots of examples.
+
 ## AI usage log for P1L6 - Coding Help
 
 ## AI usage log for P1L6 - Solo Build

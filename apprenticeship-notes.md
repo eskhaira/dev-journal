@@ -113,6 +113,13 @@ added new field category into transactionProps, updated the component call insid
 Created a separate function to format cents back into dollars as formatting is now repeating in more than one place.
 Seed data now holds six transactions, with multiple transactions having same category. This was done to check the math behind category totals we are going to code afterwards.
 
+Category totals should show as follows:
+
+1. Fuel: 401.50
+2. Food: 14.75
+3. Maintenance: 28.00
+4. Grand Total: 444.25
+
 ## P1L6 Solo Build Notes
 
 ## P1L6 Teach-back 100 words
